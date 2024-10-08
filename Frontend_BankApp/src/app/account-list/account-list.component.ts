@@ -33,4 +33,7 @@ export class AccountListComponent {
   withdraw(id: number) {
     this.router.navigate(['/withdraw', id])
   }
+  view(id:number){
+    this.router.navigate(['/view', id])
+  }
 }

@@ -5,13 +5,16 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { DepositComponent } from './deposit/deposit.component';
 import { WithdrawComponent } from './withdraw/withdraw.component';
 import { DeleteAccountComponent } from './delete-account/delete-account.component';
+import { ViewAccountComponent } from './view-account/view-account.component';
 
 const routes: Routes = [
   { path: "accounts", component: AccountListComponent},
   { path: "create-account", component: CreateAccountComponent },
   { path: "deposit/:id", component: DepositComponent },
   { path: "withdraw/:id", component: WithdrawComponent },
-  { path: "delete/:id", component: DeleteAccountComponent }
+  { path: "delete/:id", component: DeleteAccountComponent },
+  { path: "view/:id", component: ViewAccountComponent }
+
 ];
 
 @NgModule({

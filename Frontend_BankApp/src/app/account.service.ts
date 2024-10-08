@@ -36,6 +36,10 @@ export class AccountService {
   delete(id: number) {
     return this.httpClient.delete<Account>(`${this.baseUrl}/${id}`);
   }
+
+  view(id:number){
+    return this.httpClient.get<Account>(`${this.baseUrl}/${id}`);
+  }
   goToAccountList() {
     this.router.navigate(['/accounts'])
   }

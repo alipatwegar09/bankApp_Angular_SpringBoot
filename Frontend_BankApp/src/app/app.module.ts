@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { DepositComponent } from './deposit/deposit.component';
 import { WithdrawComponent } from './withdraw/withdraw.component';
 import { DeleteAccountComponent } from './delete-account/delete-account.component';
+import { ViewAccountComponent } from './view-account/view-account.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DeleteAccountComponent } from './delete-account/delete-account.componen
     CreateAccountComponent,
     DepositComponent,
     WithdrawComponent,
-    DeleteAccountComponent
+    DeleteAccountComponent,
+    ViewAccountComponent
   ],
   imports: [
     BrowserModule,
