@@ -38,6 +38,11 @@ onSubmit() {
 }
 else{
     this.errorMsg = "Invalid Amount....Please enter valid amount!";
+
+      setTimeout(() => {
+        this.errorMsg = "";
+      },2000)
+
 }
 }
 

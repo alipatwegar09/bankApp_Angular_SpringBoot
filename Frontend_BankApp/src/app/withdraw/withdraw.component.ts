@@ -25,19 +25,26 @@ export class WithdrawComponent {
   successMsg = "";
   errorMsg = "";
   onWithdraw() {
+    if(this.withdrawAmount> this.account.balance && this.isValidAmount(this.withdrawAmount)){
+      this.errorMsg = "Insufficient balance!";
+      setTimeout(() => {
+        this.errorMsg = "";
+      },2000)
+    }
     if (this.isValidAmount(this.withdrawAmount)) {
       this.accountService.withdraw(this.id, this.withdrawAmount).subscribe(data => {
         this.account = data;
-        this.successMsg = "withdraw Successfully....Minimum Amout will be 100000Rs";
+        this.successMsg = "withdraw Successfully....maximum Amout will be 10 lakh Rupees";
         setTimeout(() => {
           this.accountService.goToAccountList();
         }, 2000)
-
-
       })
     }
     else {
       this.errorMsg = "Invalid Amount....Please enter valid amount!";
+      setTimeout(()=>{
+      this.errorMsg="";
+      },2000)
     }
   }
 
