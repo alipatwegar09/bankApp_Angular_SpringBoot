@@ -28,7 +28,7 @@ export class WithdrawComponent {
     if (this.isValidAmount(this.withdrawAmount)) {
       this.accountService.withdraw(this.id, this.withdrawAmount).subscribe(data => {
         this.account = data;
-        this.successMsg = "withdraw Successfully....";
+        this.successMsg = "withdraw Successfully....Minimum Amout will be 100000Rs";
         setTimeout(() => {
           this.accountService.goToAccountList();
         }, 2000)
